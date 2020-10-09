@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
+    </nav>
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="input-group-append searchBar">
+                    <input id="searchBox" type="text" class="form-control" placeholder="Search City">
+                    <button id="searchBtn" class="btn btn-primary" type="button">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                            <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                        </svg>
+                    </button>
+                </div>
+                <ul id="cityList" class="list-group">
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                </ul>
+            </div> 
+            <div class="col-9">
+                <div class="box">
+                    <h1 id="title">Atlanta</h1>
+                    <ul>
+                        <li id="temp">Temperature</li>
+                        <li id="humidity">Humidity</li>
+                        <li id="wind-speed">Wind Speed</li>
+                        <li id="uv-index">UV Index</li>
+                    </ul>
+                    <img id="currentIcon">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-9 card-group">
+                <div class="card">
+                    <div class="card-body box rounded bg-primary">
+                        <h5 id="date1" class="card-title">Date</h5>
+                        <img id="img1" class="card-img" alt="Weather Symbol">
+                        <p id="temp-day1" class="card-text">Temp: </p>
+                        <p id="humidity-day1" class="card-text">Humidity: </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body box rounded bg-primary">
+                        <h5 id="date2" class="card-title">Date</h5>
+                        <img id="img2" class="card-img" alt="Weather Symbol">
+                        <p id="temp-day2" class="card-text ">Temp: </p>
+                        <p id="humidity-day2" class="card-text">Humidity: </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body box rounded bg-primary">
+                        <h5 id="date3" class="card-title">Date</h5>
+                        <img id="img3" class="card-img" alt="Weather Symbol">
+                        <p id="temp-day3" class="card-text">Temp: </p>
+                        <p id="humidity-day3" class="card-text">Humidity: </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body box rounded bg-primary">
+                        <h5 id="date4" class="card-title">Date</h5>
+                        <img id="img4" class="card-img" alt="Weather Symbol">
+                        <p id="temp-day4" class="card-text">Temp: </p>
+                        <p id="humidity-day4" class="card-text">Humidity: </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body box rounded bg-primary">
+                        <h5 id="date5" class="card-title">Date</h5>
+                        <img id="img5" class="card-img" alt="Weather Symbol">
+                        <p id="temp-day5" class="card-text">Temp: </p>
+                        <p id="humidity-day5" class="card-text">Humidity: </p>
+                    </div>
+                </div>
+            </div>
+        </div>       
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</body>
+</html>
