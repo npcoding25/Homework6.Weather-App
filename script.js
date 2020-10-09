@@ -6,11 +6,17 @@ function showInfo() {
 }
 
 let city = ""
-
+let cities = []
 document.querySelector("#searchBtn").addEventListener("click", function(event) {
     event.preventDefault()
     city = document.querySelector("#searchBox").value
-    console.log(city)
+    cities.push(city)
+    localStorage.setItem("cities", JSON.stringify(cities))
+    console.log(cities)
+    $("#cityList").append(`<li class="list-group-item">${city}</li>`)
+    
+    
+    
     getWeather()
 })
 
@@ -40,7 +46,7 @@ function getWeather() {
         let latitude = response.coord.lat
         let longitude = response.coord.lon
         showInfo() 
-        function getMoreWeather() {
+        function getFutureWeather() {
             let queryUrl2 = "https://api.openweathermap.org/data/2.5/onecall?lat=" + latitude + "&lon=" + longitude + "&units=metric" + "&appid=" + ApiKey
 
             $.ajax({
@@ -63,17 +69,9 @@ function getWeather() {
                     $("#temp-day"+ i).text("Temp: " + Math.round(future.temp.max) + "°C")
                     $("#humidity-day"+ i).text("Humidity: " + future.humidity + "%")
                 }
-
-
-
-
-                let unixTime = $(".date1").text()
-                console.log(unixTime)
-                unixTime =  moment.format("MM/DD/YYYY")
-                console.log(unixTime)
             })
         }
-        getMoreWeather()
+        getFutureWeather()
     })
 }
 
