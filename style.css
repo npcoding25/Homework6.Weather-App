@@ -3,8 +3,29 @@
     justify-content: center;
 }
 
+.navbar-brand {
+    font-size: 30px;
+}
+
 .list-group {
     margin: 10px;
+}
+
+.current-data {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#title {
+    font-weight: bolder;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#currentDate {
+    font-weight: bolder;
+    text-align: center;
+    font-size: 24px;
 }
 
 .searchBar {
@@ -14,13 +35,19 @@
 .box {
     border: solid 2px;
     padding: 10px;
-    margin: 10px;
     box-shadow: 1px 1px;
     position: relative;
 }
 
 .card-title {
     text-align: center;
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.card-text {
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .card {
@@ -31,4 +58,8 @@
     position: absolute;
     right: 10px;
     bottom: 10px;
+}
+
+.hide {
+    display: none;
 }

@@ -15,7 +15,7 @@
     
     <div class="container">
         <div class="row">
-            <div class="col-3">
+            <div class="col-lg-3">
                 <div class="input-group-append searchBar">
                     <input id="searchBox" type="text" class="form-control" placeholder="Search City">
                     <button id="searchBtn" class="btn btn-primary" type="button">
@@ -33,65 +33,70 @@
                     <li class="list-group-item"></li>
                 </ul>
             </div> 
-            <div class="col-9">
+            <div id="current-weather-box" class="col-lg-9 hide">
                 <div class="box">
-                    <h1 id="title">Atlanta</h1>
-                    <ul>
-                        <li id="temp">Temperature</li>
-                        <li id="humidity">Humidity</li>
-                        <li id="wind-speed">Wind Speed</li>
-                        <li id="uv-index">UV Index</li>
-                    </ul>
+                    <div class="row">
+                        <div class="col-4">
+                            <h1 id="title"></h1>
+                        </div>
+                        <div class="col-8">
+                            <h1 id="currentDate"></h1>
+                        </div>
+                    </div>        
+                    <p id="temp" class="current-data"></p>
+                    <p id="humidity" class="current-data"></p>
+                    <p id="wind-speed" class="current-data"></p>
+                    <p id="uv-index" class="current-data"></p>
                     <img id="currentIcon">
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-3"></div>
-            <div class="col-9 card-group">
+        <div id="future-weather-cards" class="row hide">
+            <div class="col card-group">
                 <div class="card">
                     <div class="card-body box rounded bg-primary">
-                        <h5 id="date1" class="card-title">Date</h5>
+                        <h5 id="date1" class="card-title"></h5>
                         <img id="img1" class="card-img" alt="Weather Symbol">
-                        <p id="temp-day1" class="card-text">Temp: </p>
-                        <p id="humidity-day1" class="card-text">Humidity: </p>
+                        <p id="temp-day1" class="card-text"></p>
+                        <p id="humidity-day1" class="card-text"></p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body box rounded bg-primary">
-                        <h5 id="date2" class="card-title">Date</h5>
+                        <h5 id="date2" class="card-title"></h5>
                         <img id="img2" class="card-img" alt="Weather Symbol">
-                        <p id="temp-day2" class="card-text ">Temp: </p>
-                        <p id="humidity-day2" class="card-text">Humidity: </p>
+                        <p id="temp-day2" class="card-text "></p>
+                        <p id="humidity-day2" class="card-text"></p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body box rounded bg-primary">
-                        <h5 id="date3" class="card-title">Date</h5>
+                        <h5 id="date3" class="card-title"></h5>
                         <img id="img3" class="card-img" alt="Weather Symbol">
-                        <p id="temp-day3" class="card-text">Temp: </p>
-                        <p id="humidity-day3" class="card-text">Humidity: </p>
+                        <p id="temp-day3" class="card-text"></p>
+                        <p id="humidity-day3" class="card-text"></p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body box rounded bg-primary">
-                        <h5 id="date4" class="card-title">Date</h5>
+                        <h5 id="date4" class="card-title"></h5>
                         <img id="img4" class="card-img" alt="Weather Symbol">
-                        <p id="temp-day4" class="card-text">Temp: </p>
-                        <p id="humidity-day4" class="card-text">Humidity: </p>
+                        <p id="temp-day4" class="card-text"></p>
+                        <p id="humidity-day4" class="card-text"></p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body box rounded bg-primary">
-                        <h5 id="date5" class="card-title">Date</h5>
+                        <h5 id="date5" class="card-title"></h5>
                         <img id="img5" class="card-img" alt="Weather Symbol">
-                        <p id="temp-day5" class="card-text">Temp: </p>
-                        <p id="humidity-day5" class="card-text">Humidity: </p>
+                        <p id="temp-day5" class="card-text"></p>
+                        <p id="humidity-day5" class="card-text"></p>
                     </div>
                 </div>
             </div>
         </div>       
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </body>
