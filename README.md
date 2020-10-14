@@ -1,5 +1,12 @@
 # Weather Dashboard
 
+## Table of Contents
+
+  - [Objective](#Objective)
+  - [Functionality](#Functionality)
+  - [Challenges & Improvements](#Challenges_&_Improvements)
+  - [Screenshots](#Screenshots)
+
 ## Objective
 
 * Create a weather application where the user searches for a city and is shown current and future data
@@ -31,6 +38,7 @@ One of the main issues I had was with localStorage. After eventually getting the
 
 ![image](https://user-images.githubusercontent.com/69565347/95931416-f2c4f800-0d7d-11eb-94fc-f57f355c048d.png)
 
-![image](https://user-images.githubusercontent.com/69565347/95931525-391a5700-0d7e-11eb-8a98-dbae453b60d0.png)
+![image](https://user-images.githubusercontent.com/69565347/95943649-4134bf80-0d9b-11eb-8d4d-e9265c0970b3.png)
+
 
 Click [Here](https://npcoding25.github.io/Homework6.Weather-App/) to see launched webpage.

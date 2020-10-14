@@ -12,7 +12,6 @@ let cities = localStorage.cities ? JSON.parse(localStorage.cities) : []
 
 // Giving the search button a function when clicked
 document.querySelector("#searchBtn").addEventListener("click", function(event) {
-    event.preventDefault()
     
     // Acquiring user input then pushing into cities array
     city = document.querySelector("#searchBox").value
