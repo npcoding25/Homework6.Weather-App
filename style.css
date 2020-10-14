@@ -28,8 +28,12 @@
     font-size: 24px;
 }
 
+#clearBtn {
+    margin-left: 10px;
+}
+
 .searchBar {
-    margin: 10px;
+    margin-left: 10px;
 }
 
 .box {

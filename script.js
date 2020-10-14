@@ -1,25 +1,34 @@
 function showInfo() {
     let currentWeather = document.querySelector("#current-weather-box")
     let futureWeather = document.querySelector("#future-weather-cards")
+    let clearBtn = document.querySelector("#clearBtn")
     currentWeather.classList.remove("hide")
     futureWeather.classList.remove("hide")
+    clearBtn.classList.remove("hide")
 }
 
 let city = ""
-let cities = []
+let cities = localStorage.cities ? JSON.parse(localStorage.cities) : []
+
 document.querySelector("#searchBtn").addEventListener("click", function(event) {
     event.preventDefault()
     city = document.querySelector("#searchBox").value
     cities.push(city)
     localStorage.setItem("cities", JSON.stringify(cities))
-    console.log(cities)
-    $("#cityList").append(`<li class="list-group-item">${city}</li>`)
-    
-    
+    $("#cityList").prepend(`<button class="list-group-item" onclick="getWeather()">${city}</button>`)
     
     getWeather()
 })
 
+function showCities() {
+    for (let i=0; i<cities.length; i++ ) {
+        console.log(cities[i])
+        $("#cityList").prepend(`<button class="list-group-item" onclick="getWeather()">${cities[i]}</button>`)
+        city = cities[i]
+    }
+}
+
+$("#clearBtn").on("click", () => localStorage.clear())
 
 const ApiKey = "9fcd3a5881a397cda2d72d306ef443fe"
 function getWeather() {
@@ -46,6 +55,7 @@ function getWeather() {
         let latitude = response.coord.lat
         let longitude = response.coord.lon
         showInfo() 
+
         function getFutureWeather() {
             let queryUrl2 = "https://api.openweathermap.org/data/2.5/onecall?lat=" + latitude + "&lon=" + longitude + "&units=metric" + "&appid=" + ApiKey
 
@@ -74,4 +84,6 @@ function getWeather() {
         getFutureWeather()
     })
 }
-
+$(document).ready( function() {
+    showCities()
+})
